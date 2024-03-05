@@ -2,11 +2,11 @@ import java.util.Objects;
 
 public class Przedmiot {
     public String nazwaPrzedmiotu;
-    private int PunktyECTS;
+    private int punktyECTS;
 
     public Przedmiot(String nazwaPrzedmiotu, int punktyECTS) {
         this.nazwaPrzedmiotu = nazwaPrzedmiotu;
-        PunktyECTS = punktyECTS;
+        punktyECTS = punktyECTS;
     }
     public Przedmiot(){
 
@@ -15,30 +15,27 @@ public class Przedmiot {
         return nazwaPrzedmiotu;
     }
     public int getPunktyECTS() {
-        return PunktyECTS;
+        return punktyECTS;
     }
     public void setNazwaPrzedmiotu(String nazwaPrzedmiotu) {
         this.nazwaPrzedmiotu = nazwaPrzedmiotu;
     }
     public void setPunktyECTS(int punktyECTS) {
-        PunktyECTS = punktyECTS;
+        punktyECTS = punktyECTS;
     }
     @Override
     public String toString() {
-        return "Przedmiot{" +
-                "nazwaPrzedmiotu='" + nazwaPrzedmiotu + '\'' +
-                ", PunktyECTS=" + PunktyECTS +
-                '}';
+        return String.format("%s - %d", nazwaPrzedmiotu, punktyECTS);
     }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Przedmiot przedmiot = (Przedmiot) o;
-        return PunktyECTS == przedmiot.PunktyECTS && Objects.equals(nazwaPrzedmiotu, przedmiot.nazwaPrzedmiotu);
+        return punktyECTS == przedmiot.punktyECTS && Objects.equals(nazwaPrzedmiotu, przedmiot.nazwaPrzedmiotu);
     }
     @Override
     public int hashCode() {
-        return Objects.hash(nazwaPrzedmiotu, PunktyECTS);
+        return Objects.hash(nazwaPrzedmiotu, punktyECTS);
     }
 }

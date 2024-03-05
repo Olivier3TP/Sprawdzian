@@ -17,5 +17,7 @@ public class Main {
 
         student3.listaPrzedmiotow.add(informatyka);
         student3.listaPrzedmiotow.add(matematyka);
+
+        // będzie 5 ?
     }
 }

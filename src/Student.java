@@ -31,12 +31,7 @@ public class Student {
     }
     @Override
     public String toString() {
-        return "Student{" +
-                "imie='" + imie + '\'' +
-                ", nazwisko='" + nazwisko + '\'' +
-                ", nrIndeksu=" + nrIndeksu +
-                ", rokStudiow=" + rokStudiow +
-                '}';
+        return String.format("%s, %s, %d, %d", imie, nazwisko, nrIndeksu, rokStudiow);
     }
     @Override
     public boolean equals(Object o) {
